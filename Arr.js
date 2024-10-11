@@ -49,3 +49,15 @@ let fruits = ['apple', 'banana', 'cherry', 'dates', 'elderberry'];
 //  arr1.splice(2, 1, 'fig', 'grapes');
  let newfruitsarr =  fruits.splice(2, 1, 'fig', 'grapes');
 console.log(newfruitsarr);
+
+ let newMapArray=languages.map((item , index)=>{
+    if(index%2==0){
+        return item;
+    }
+    
+})
+console.log(newMapArray)
+let forEachArr = languages.forEach((item)=>{
+     console.log("froEach",item)
+   
+})
