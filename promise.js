@@ -1,6 +1,6 @@
 let promise = new Promise(function (resolve, reject) {
-    const x = "geeksforgeeks";
-    const y = "geeksforgeks"
+    const x = 1;
+    const y = 1;
     if (x === y) {
         resolve();
     } else {
@@ -10,8 +10,16 @@ let promise = new Promise(function (resolve, reject) {
 
 promise.
     then(function () {
-        console.log('Success, You are a GEEK');
+        console.log('Success with regular function');
     }).
     catch(function () {
         console.log('Some error has occurred');
     }); 
+
+
+promise.then( () =>{
+    console.log("success with arraow function")
+}).catch(()=>{
+    console.log("error with arraow function")
+})
+

@@ -1,6 +1,6 @@
-let str = "helloworld"
+let string = "helloworld"
 // console.log(str.split(""))// 'h', 'e', 'l', 'l','o', 'w', 'o', 'r','l', 'd'
 // console.log(str.split(','))
 
-sl=str.slice(0,5)
+sl=string.slice(0,5)
 console.log(sl)

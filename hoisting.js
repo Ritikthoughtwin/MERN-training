@@ -1,10 +1,10 @@
 const myObject = {
-    regularExample: function() {
-      console.log("REGULAR: ", this)
+    regularFunction: function() {
+      console.log("REGULAR FUNCTION: ", this)
     },
   
-    arrowExample: () => {
-      console.log("ARROW: ", this)
+    arrowFunction: () => {
+      console.log("ARROW FUNCTION: ", this)
     }
   }
   
