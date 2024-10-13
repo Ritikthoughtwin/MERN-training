@@ -27,4 +27,15 @@ mainFunction(callbackFunction);
 
 
 /*...............................................................................................*/
+function mainFunction(callback) {
+    console.log("Performing operation...");
+    setTimeout(function() {
+      callback("Operation complete");
+    }, 1000);
+  }
+                                                               // callback with using arrow function
 
+  
+  mainFunction((result)=> {
+    console.log("Result: " + result);
+  });
