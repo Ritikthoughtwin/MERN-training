@@ -28,3 +28,19 @@ async function myFunction1(){
     let value = await fetch("")
     console.log(value);
 }
+/*...........................................................................................................................*/
+
+ const arrow_function=async()=>{ 
+     
+     await setTimeout(()=>{
+         return 5;
+     },2000);
+                                                            //async-await with arrow function
+ }
+arrow_function.then((value)=>{
+console.log("value : ",value);
+}) 
+
+arrow_function.catch((error)=>{
+    console.log("something wrong try again",error);
+})
