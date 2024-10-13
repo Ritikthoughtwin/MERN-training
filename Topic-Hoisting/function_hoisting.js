@@ -1,19 +1,21 @@
 
-print_hello();
-function print_hello(){   //will work with regular function
+printHello();
+function printHello(){   //will work with regular function
     console.log("Hello");
 }
 
+/*..................................................................................................................................................*/
 
-print_hello();
+printHii();
 //use let,var or const
-let print_hello=function (){   //will not work
-    console.log("Hello");
+let printHii=function (){   //will not work
+    console.log("Hii");
 }
 
+/*.............................................................................................................................................*/
 
-print_hello();
+printGoodMorning();
 //use let,var or const
-let print_hello=()=>{   //will not work
-    console.log("Hello");
+let printGoodMorning=()=>{   //will not work
+    console.log("GoodMorning");
 }
