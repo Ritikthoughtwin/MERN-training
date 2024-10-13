@@ -1,7 +1,10 @@
 //variable hoisting with var
 
-console.log(a);//will work
-var a=5;
+console.log(x); // Output: undefined (due to hoisting)
+var x = 5;
+console.log(x); // Output: 5
+
+/*........................................................................................................................*/
 
 //variable hoisting with let and const
 
