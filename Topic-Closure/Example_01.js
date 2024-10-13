@@ -7,3 +7,17 @@ function parent() {
 }
 
 parent();
+
+/*...................................................................................................................*/
+
+const outer=()=>{
+    value=5;
+     const inner=()=>{
+         console.log(value);      //using arrow function
+     }
+    inner();
+}
+outer();
+
+    
+
