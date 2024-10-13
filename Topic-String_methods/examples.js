@@ -3,38 +3,38 @@ let length = text.length;
 
 /*............................................................................................................................*/
 
-let text1 = "HELLO WORLD";
+let text = "HELLO WORLD";
 let char = text1.charAt(0);
 
 /*........................................................................................................................*/
 
-const name1 = "W3Schools";
-let letter = name1.at(2);
+const name = "krishnakant";
+let letter = name.at(2);
 
 
 /*...................................................................................................................................................*/
 
-let text2 = "HELLO WORLD";
-let char2 = text[0];
+let text = "This is a string";
+let char = text[0];
 
 /*............................................................................................................................*/
 
-let text3 = "Apple, Banana, Kiwi";
-let part = text3.slice(7, 13);
+let text = "Apple, Banana, Kiwi";
+let part = text.slice(7, 13);
 
 
 /*......................................................................................................................*/
 
 
-let text11 = "Hello World!";
-let text22= text11.toUpperCase();
+let text = "virat kohli";
+let updated= text.toUpperCase();
 
 
 /*........................................................................................................................*/
 
 
-let text12 = "Hello World!";       // String
-let text23 = text12.toLowerCase();  // text2 is text1 converted to lower 
+let text = "ROHIT SHARMA";       
+let updated = text12.toLowerCase();  
 
 
 /*........................................................................................................*/
@@ -47,32 +47,32 @@ text = "Hello".concat(" ", "World!");
 /*...........................................................................................................................*/
 
 
-let text01 = "      Hello World!      ";
-let text02 = text01.trim();
+let name = "      krishnakant thakur      ";
+let updated = name.trim();
 
 
 
 
 /*...............................................................................................................*/
 
-let text0 = "Hello world!";
-let result = text0.repeat(4);
+let text = "Hello world!";
+let result = text.repeat(4);
 
 /*....................................................................................................................................*/
 
 
-let text_ = "Please visit Microsoft!";
-let newText = text_.replace("Microsoft", "W3Schools");
+let text = "Please visit Microsoft!";
+let newText = text.replace("company", "thoughtwin");
 
 
 /*........................................................................................................................*/
 
-let text__= "Please locate where 'locate' occurs!";
-let index = text__.indexOf("locate");
+let text= "Please locate where 'locate' occurs!";
+let index = text.indexOf("locate");
 
 
 /*......................................................................................................................*/
 
 
-let text6 = "Please locate where 'locate' occurs!";
-text6.search("locate");
+let text = "Please locate where 'locate' occurs!";
+text.search("locate");
