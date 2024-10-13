@@ -27,9 +27,7 @@ let myPromise = new Promise(function(resolve, reject) {
 
   /********************************************************************************************* */
   
-  //Another Example 
-  
-  
+ 
 
   let promise = new Promise(function (resolve, reject) {
     const x = 45;
