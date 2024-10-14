@@ -2,24 +2,22 @@
 // This technique allows a function to call another function
 // A callback function can run after another function has finished
 
- 
 // let myDisplayer=(some) =>{
-    
 
 //    console.log(some)
 //   }
-  
+
 //   function myFirst() {
 //     myDisplayer("Hello");
 //   }
-  
+
 //   function mySecond() {
 //     myDisplayer("Goodbye");
-//   } 
+//   }
 //   myFirst()
 //   mySecond()
 
-// Tea process 
+// Tea process
 
 // function putPanInGas(){
 //     console.log("pan placed in gas")
@@ -47,9 +45,8 @@
 // pureit()
 // console.timeLog("tea")
 
-// all function independent 
-// no flow control and no error handling 
-
+// all function independent
+// no flow control and no error handling
 
 // call back
 
@@ -66,7 +63,7 @@
 // }
 // function addtealeaves(){
 //     console.log("tea leaves added")
-   
+
 // }
 // function addsuger(){
 //     console.log("add suger in tea")
@@ -86,23 +83,21 @@
 // putPanInGas()
 // addwater(addsuger)
 
-
 // function fun (callback){
 //     console.log("hii")
-  
+
 // }
 // function fun1(){
 //     console.log("helo")
 // }
 // fun1(fun())
 
-
 // callback problem many time debit no control the code
 
 // function buynow(){
 //     transcation()
 //     transcation()
-  
+
 // }
 
 // function transcation(){

@@ -15,10 +15,8 @@
 //     }
 //   return  inner
 
-
 // }
 // let fun =outer();
-
 
 // let val=fun();
 // console.log(val)
@@ -28,7 +26,6 @@
 //     return num
 // }
 // console.log(addtwo(5))
-
 
 // addtwoo(5)
 // const addtwoo=function(num){
@@ -40,17 +37,12 @@
 //     return num*5
 // }
 
-
-
-//  A closure is the combination of a function bundled together 
-//  (enclosed) with references to its surrounding state (the lexical environment). 
+//  A closure is the combination of a function bundled together
+//  (enclosed) with references to its surrounding state (the lexical environment).
 //  In other words, a closure gives a function access to its outer scope.
 
-
- 
 // function outer (multiple){
 
-  
 //     function inner(input){
 //         return  input*multiple
 
@@ -71,17 +63,14 @@
 
 // outer(5)
 
-
-
-function outer(){
-    let a=10      // block scop
-    let name="vinod"
-    function inner (){
-        console.log(name)
-       console.log(a)
-    }
-    return inner
+function outer() {
+  let a = 10; // block scop
+  let name = "vinod";
+  function inner() {
+    console.log(name);
+    console.log(a);
+  }
+  return inner;
 }
-let a1=outer()
-a1()
-
+let a1 = outer();
+a1();

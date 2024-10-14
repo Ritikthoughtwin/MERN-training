@@ -1,61 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div style="width: 100px; height: 100px;" id="go"></div>
+  </head>
+  <body>
+    <div style="width: 100px; height: 100px" id="go"></div>
     <button onclick="fun('red')">red</button>
     <button onclick="fun('green')">green</button>
 
-
     <script>
-        function fun (color){
-            document.getElementById("go").style.background=color
-
-        }
+      function fun(color) {
+        document.getElementById("go").style.background = color;
+      }
     </script>
-
-    
-</body>
+  </body>
 </html>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-
-    <div style="width: 100%;height: 100vh;" >
-        <button id="grey" >grey</button>
-        <button id="yellow" >yellow</button>
-
+  </head>
+  <body>
+    <div style="width: 100%; height: 100vh">
+      <button id="grey">grey</button>
+      <button id="yellow">yellow</button>
     </div>
 
-<script>
-     function clickhendler(color){
+    <script>
+      function clickhendler(color) {
+        return function () {
+          document.body.style.backgroundColor = `${color}`;
+        };
+      }
 
-        return function(){
-        document.body.style.backgroundColor=`${color}`
-        }
-     }
-
-     document.getElementById("grey").onclick=clickhendler("grey")
-     document.getElementById("yellow").onclick=clickhendler("yellow")
-
-</script>
-
-
-
-    
-</body>
+      document.getElementById("grey").onclick = clickhendler("grey");
+      document.getElementById("yellow").onclick = clickhendler("yellow");
+    </script>
+  </body>
 </html>
-
-
