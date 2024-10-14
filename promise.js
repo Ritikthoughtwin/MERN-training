@@ -52,7 +52,7 @@ promise.
         console.log('Success with regular function');
     }).
     catch(function () {
-        console.log('Some error has occurred');
+        console.log('Error with regular function');
     }); 
 
 
@@ -61,5 +61,3 @@ promise.then( () =>{
 }).catch(()=>{
     console.log("error with arraow function")
 })
-
-

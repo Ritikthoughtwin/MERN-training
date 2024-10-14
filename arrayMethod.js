@@ -3,9 +3,9 @@ let languages = ['C++', 'Java', 'Html', 'Python', 'C'];
 let webDvlop = ["HTML", "CSS", "JS", "Bootstrap"];
 
 //////////// entries = return key value pair of every index
-let v = languages.entries();
-for(x of v ){
-    console.log("entries",x);
+let checkEntries = languages.entries();
+for(value of checkEntries ){
+    console.log("entries",value);
 }
 
 ///////////// find = returns first element which passes the condition 
@@ -61,3 +61,12 @@ let forEachArr = languages.forEach((item)=>{
      console.log("froEach",item)
    
 })
+
+let filterPro = arr.filter((item)=>{
+    return item%2==0;
+})
+console.log("using filter",filterPro)
+let mapArray = arr.map((item)=>{
+    return item%2==0
+})
+console.log("using map",mapArray)

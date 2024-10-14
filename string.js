@@ -1,6 +1,6 @@
 let string = "helloworld"
-// console.log(str.split(""))// 'h', 'e', 'l', 'l','o', 'w', 'o', 'r','l', 'd'
-// console.log(str.split(','))
+ console.log(string.split(""))// 'h', 'e', 'l', 'l','o', 'w', 'o', 'r','l', 'd'
+ console.log(string.split(','))
 
 sliceString=string.slice(0,5)
 console.log(sliceString)
