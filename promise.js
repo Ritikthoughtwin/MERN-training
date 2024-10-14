@@ -1,6 +1,6 @@
 // Setteled Promise :- A promise is said to be settled if it is either fulfilled or rejected, but not pending.
 
-let promise = new Promise(function (resolve, reject) {
+let promiseOne = new Promise(function (resolve, reject) {
     const x = 1;
     const y = 1;
     if (x === y) {
@@ -10,8 +10,8 @@ let promise = new Promise(function (resolve, reject) {
     }
 });
 
-let promise1 =  Promise.resolve(6)
-let promise2 = new Promise(function(resolve,){
+let promiseTwo =  Promise.resolve(6)
+let promiseThree = new Promise(function(resolve,){
         setTimeout(
             ()=>{
                 resolve("hello")
@@ -19,7 +19,7 @@ let promise2 = new Promise(function(resolve,){
         )
 })
 
-let promises = [promise,promise1,promise2]
+let promises = [promiseOne,promiseTwo,promiseThree]
 
 
 /// Promise.all :- iterate over all promises
@@ -29,7 +29,7 @@ Promise.all(promises).then(
     }
 )
 
-/// Promise.any :- returns any which executes fast
+/// Promise.any :- returns any which executes first
 Promise.any(promises).then((value) => console.log("Any", value));
 
 /// Promise.race :- returns promise which compete first among all the proises
@@ -57,7 +57,7 @@ promise.
 
 
 promise.then( () =>{
-    console.log("success with arraow function")
+    console.log("success with arrow function")
 }).catch(()=>{
-    console.log("error with arraow function")
+    console.log("error with arrow function")
 })
