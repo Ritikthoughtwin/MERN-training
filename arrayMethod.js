@@ -57,10 +57,10 @@ console.log(newWebDevloper);
     
 })
 console.log(newMapArray)
-let forEachArr = languages.forEach((item)=>{
-     console.log("froEach",item)
-   
+let forEachArray = languages.forEach((item)=>{
+     console.log("forEach",item)
 })
+console.log(forEachArray)
 
 let filterArray = arr.filter((item)=>{
     return item%2==0;
