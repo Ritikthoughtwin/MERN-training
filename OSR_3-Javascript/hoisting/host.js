@@ -1,4 +1,6 @@
 ///////////////////////////////HOISTING
+// The Hoisting work before code run the memory
+
 // a = 20;
 // console.log(a);
 // var a;
@@ -27,12 +29,12 @@
 //   console.log('track');
 // };
 //////////////////////////////////////arrow funactin is not work with hositing
+// all the variable can store as undefind and the function and  before instilization code
 
-a = [1, 4, 5, 6, 7, 3];
-fun(...a);
-a.splice(0, 1);
-console.log(a);
-
-function fun(...arr) {
-  console.log(arr);
+function fun() {
+  console.log('aditya ', a);
 }
+console.log('qweldyhiuqwuidhe qwjeshqw ', a);
+
+fun();
+var a = 10;
