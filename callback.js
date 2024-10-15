@@ -1,6 +1,6 @@
-let num = [1,2,3,4,5]
+let numbers = [1,2,3,4,5]
 function first(){
-    console.log("hello1")
+    console.log("hello")
 }
 
 function second(callback){
@@ -11,12 +11,12 @@ function second(callback){
    
 }
 
-const tableLogic = (num)=>{
-      console.log(num*2)
+const tableLogic = (numbers)=>{
+      console.log(numbers*2)
 }
 
 const table = (callback)=>{
-   num.forEach(callback)
+    numbers.forEach(callback)
   
 }
 

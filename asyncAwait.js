@@ -2,20 +2,19 @@ const test = () => {
     return "test"
 }
 
-async function  hello(){
-    //  console.log("hello")
+async function  checkAsyncReturn(){
     const res =  test();
     return res
 }
 
-console.log(hello())
+console.log(checkAsyncReturn())
 
-const getData = async() =>{
+const getName = async() =>{
   let name = await "Josh"
   console.log("name", name);
   
 }
 
-getData()
+getName()
 console.log("hello")
-hello()
+checkAsyncReturn()

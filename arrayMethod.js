@@ -3,8 +3,8 @@ let languages = ['C++', 'Java', 'Html', 'Python', 'C'];
 let webDevlop = ["HTML", "CSS", "JS", "Bootstrap"];
 
 
-
-// entries = return key value pair of every index
+// Fro OF Loop
+// entries = used to create an iterator that returns key/value pairs for each index in the array.
 let checkEntries = languages.entries();
 for(value of checkEntries ){
     console.log("entries",value);
@@ -39,16 +39,20 @@ function sumArr(sum , num){
     return sum+num;
 }
 console.log(arr.reduce(sumArr));
+
 let newArray = arr.slice(2, 6);
 console.log(newArray);
- let modifyArray = arr.splice(2,1, 1000,500)
- console.log("spice",modifyArray)
+
+let modifyArray = arr.splice(2,1, 1000,500)
+console.log("spice",modifyArray)
 webDevlop.splice(2, 1, 'PHP', 'React_Native')
 console.log(webDevlop)
 
 
  let newWebDevloper =  webDevlop.splice(2, 1, 'fig', 'grapes');
 console.log(newWebDevloper);
+
+// Iterate Using Map
 
  let newMapArray=languages.map((item , index)=>{
     if(index%2==0){
@@ -57,10 +61,16 @@ console.log(newWebDevloper);
     
 })
 console.log(newMapArray)
+
+// For Each Loop
 let forEachArray = languages.forEach((item)=>{
      console.log("forEach",item)
 })
-console.log(forEachArray)
+console.log(forEachArray) // it will give undefine when we try to assing array output to variable using FOREACH Loop
+// For in Loop
+for (let item in languages) {
+    console.log(item + ": " + languages[item]);
+}
 
 let filterArray = arr.filter((item)=>{
     return item%2==0;
