@@ -26,7 +26,7 @@ function counter() {
     )
 }
 
-let fun = counter();
-fun.increment();
-fun.decrement();
-fun.reset();
+let outerReturn = counter();
+outerReturn.increment();
+outerReturn.decrement();
+outerReturn.reset();
