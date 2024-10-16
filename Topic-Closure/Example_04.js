@@ -2,7 +2,7 @@ function counter() {
 
     let count = 12;
 
-    function increment() {
+    const increment=()=> {
         count++;
         console.log("count value : ", count);
     }
