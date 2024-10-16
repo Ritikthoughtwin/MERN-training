@@ -59,7 +59,7 @@ let newarray = [];
 let isindex = arrPeople.findIndex((a) => a.age == 53);
 console.log(isindex);
 
-///////////////////////////////////////////////////////////////////////////////Includes
+//Includes
 // let p = a.includes(23);
 // // give the value is persent or not in boolen value
 
