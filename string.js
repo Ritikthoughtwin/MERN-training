@@ -38,3 +38,4 @@ console.log(replceString)
 
 let char = /l/ 
 console.log(string.search(char)) // index of matching characters within the string 
+

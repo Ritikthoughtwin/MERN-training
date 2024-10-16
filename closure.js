@@ -13,7 +13,7 @@ parentAddFunction()
 // console.log(parentAddFunction()) 
 // console.log(parentAddFunction()()) 
 
-// this is called currying and Closure scope chain
+// this is called currying or closure scoping chain
 function Multiply(numOne){
     return function(numTwo){
         return function(numThree){

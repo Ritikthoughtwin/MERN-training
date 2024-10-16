@@ -11,7 +11,7 @@ const promiseOne = new Promise(function (resolve, reject) {
 });
 
 const promiseTwo =  Promise.resolve(6)
-const promiseThree = new Promise(function(resolve,){
+const promiseThree = new Promise((resolve,)=>{
         setTimeout(
             ()=>{
                 resolve("hello")
@@ -56,7 +56,7 @@ promiseOne.
     }); 
 
 
-promiseOne.then( () =>{
+promiseThree.then( () =>{
     console.log("success with arrow function")
 }).catch(()=>{
     console.log("error with arrow function")

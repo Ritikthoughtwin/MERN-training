@@ -2,8 +2,7 @@ const arr = [33,56,78,66,22,88,66]
 let languages = ['C++', 'Java', 'Html', 'Python', 'C'];
 let webDevlop = ["HTML", "CSS", "JS", "Bootstrap"];
 
-
-// Fro OF Loop
+// For OF Loop
 // entries = used to create an iterator that returns key/value pairs for each index in the array.
 let checkEntries = languages.entries();
 for(value of checkEntries ){
@@ -49,7 +48,7 @@ webDevlop.splice(2, 1, 'PHP', 'React_Native')
 console.log(webDevlop)
 
 
- let newWebDevloper =  webDevlop.splice(2, 1, 'fig', 'grapes');
+let newWebDevloper =  webDevlop.splice(2, 1, 'fig', 'grapes');
 console.log(newWebDevloper);
 
 // Iterate Using Map
@@ -66,10 +65,19 @@ console.log(newMapArray)
 let forEachArray = languages.forEach((item)=>{
      console.log("forEach",item)
 })
+
+// For Each With Condition
+let forEachWithCondition = arr.forEach((item,index)=>{
+    if(index%2==0){
+        console.log("forEach with condition",item)
+    }
+})
 console.log(forEachArray) // it will give undefine when we try to assing array output to variable using FOREACH Loop
 // For in Loop
 for (let item in languages) {
-    console.log(item + ": " + languages[item]);
+    if(item%2!=0){
+        console.log(item + ": " + languages[item]);
+    }
 }
 
 let filterArray = arr.filter((item)=>{
@@ -80,3 +88,27 @@ let mapArray = arr.map((item)=>{
     return item%2==0
 })
 console.log("using map",mapArray)
+
+let numbers = [13,4,5,[56,7,[7,8,9,[9,0]]]]
+// it flattening a nested array up to the specified depth [ 13, 4, 5, 56, 7, 7, 8, 9, [ 9, 0 ] ]
+let flattenArray = numbers.flat(2) 
+console.log(flattenArray)
+
+const res = [1,2,3,6,8][1,4] // the last value of second array is consider as index and it returns the value of first array at that particular index
+console.log("res",res)
+
+let i=0;
+while(i<arr.length){
+    console.log("Using While Loop",arr[i])
+    i++;
+}
+
+
+const printNumber = (num) =>{
+        for (value in num){
+            console.log("using instance",value)
+            // return value;
+        }
+}
+console.log(printNumber(arr)) // it gives 0 by using return in printNumber arrow function
+printNumber(arr)
