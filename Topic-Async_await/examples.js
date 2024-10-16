@@ -34,7 +34,7 @@ GreetingFunction().catch((error) => {
 
 // Example 2: Fetch data from an API
 
-async function fetchDataFromAPI() {
+let fetchDataFromAPI=async()=> {
     try {
         const response = await fetch("https://jsonplaceholder.typicode.com/posts");
         const data = await response.json();  // Wait for the response to be parsed into JSON
