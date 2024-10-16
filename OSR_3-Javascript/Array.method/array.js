@@ -1,11 +1,27 @@
 let arrnum = [18, 23, 23, 4, 4, 5];
 let arrName = ['Aditya', 'vinod', 'rakesh', 'crab'];
-let arrPeople = [
+let arrNamesecond = [
+  'Aditya',
+  'vinod',
+  'rakesh',
+  'crab',
+  [18, 23, 23, 4, 4, 5],
   { name: 'aditya', age: 23, number: 9672362323, email: 'Adi@gmail.com' },
   { name: 'Ravneet', age: 7, number: 2172362323, email: 'Rasv@gmail.com' },
   { name: 'suitya', age: 39, number: 1232362323, email: 'su@gmail.com' },
   { name: 'Nitya', age: 30, number: 8922362323, email: 'nitya@gmail.com' },
 ];
+let arrPeople = [
+  { name: 'aditya', age: 23, number: 9672362323, email: 'Adi@gmail.com' },
+  { name: 'Ravneet', age: 7, number: 2172362323, email: 'Rasv@gmail.com' },
+  { name: 'suitya', age: 39, number: 1232362323, email: 'su@gmail.com' },
+  { name: 'Nitya', age: 23, number: 8922362323, email: 'nitya@gmail.com' },
+  { name: 'aditya', age: 23, number: 9672362323, email: 'Adi@gmail.com' },
+  { name: 'Ravneet', age: 71, number: 2172362323, email: 'Rasv@gmail.com' },
+  { name: 'suitya', age: 93, number: 1232362323, email: 'su@gmail.com' },
+  { name: 'Nitya', age: 30, number: 8922362323, email: 'nitya@gmail.com' },
+];
+
 let newarray = [];
 
 // remove from start change  in  origanal array "
@@ -55,30 +71,72 @@ let newarray = [];
 // FindIndex
 //  when you have to find index of array in object
 // when you have to give permitters in funaction to check ANY THING
-// complicated array
-let isindex = arrPeople.findIndex((a) => a.age == 53);
-console.log(isindex);
+// use  complicated array
+// let isindex = arrPeople.findIndex((a) => a.age == 53);
+// console.log(isindex);
 
 //Includes
-// let p = a.includes(23);
+// includes is used for search Element is persent or not in array
+// if present or not it show in console true or false
+// let isStaus = arrnum.includes(23);
 // // give the value is persent or not in boolen value
 
 //reverse
-
+// it reverae array the last to first
+// it chnag orignal array
 // a.reverse();
 // console.log(a);
-// chnage orignal array
-// reverser the array
 
-// //////////////////////////////////Join
+//Join
+// the join method return value in string
+// the join method assign value what ever we give in inside the (*) and it will put between all the elemnets
 // let n = a.join('*');
 
-// not chnage in orignal array
-// convert array into string
-// put value between all elements
+// flat( method of array not change orignal array )
+// it open array inside array into sinle array
+// let newarrayfirst = arrNamesecond.flat();
+// console.log(newarrayfirst);
 
-// /////////////////////////////////include
-let n = a.includes(5);
-console.log(n);
-// not chnage orignal array
-// return blooen value true or false
+//toSplice()  the splice method which is old chnage orignal array but tospliced whild not
+// newarray = arrnum.toSpliced(0, 1);
+// console.log(newarray);
+
+//Delete mmethod
+// remove elemnt but it put undfind on that place or empty item
+// change  orignal array
+// delete arrName[0];
+// console.log(arrName[0]);
+
+//CopyWithin()
+//Copy the element of the array
+//It will change Orignal array
+
+//arrName.copyWithin(2,0);
+//console.log(arrName);
+
+// let singlenum = arrnum.reduce((max, cur) => {
+//   if (cur > max) {
+//     max = cur;
+//   }
+//   return max;
+// }, 0);
+// console.log(singlenum);
+
+// let newdata = arrPeople.map((val) => {
+//   let fulldetails = val.name + val.email;
+//   return fulldetails;
+// });
+// console.log(newdata);
+
+// function test() {
+//   return name;
+//   function name() {}
+// }
+// console.log(test());
+
+// let newdata = arrPeople.reduce((acc, cur) => {
+//   if (acc[cur.age]) {
+//     console.log(acc);
+//   }
+// }, {});
+// console.log(newdata);
