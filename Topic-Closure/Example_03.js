@@ -1,7 +1,7 @@
-function outer(x){
+function outer(outerPassedValue){
 
     function inner(y){
-        console.log("X : ",x," and Y : ",y);
+        console.log("outerPassedValue : ",outerPassedValue," and innerPassedValue: ",innerPassedValue);
     }
     return inner;
 
@@ -13,10 +13,10 @@ child(78);
 
 /*.........................................................................................................................................*/
 
-const outer=(x)=>{
+const outer=(outerPassedValue)=>{
 
-    const inner=(y)=>{
-        console.log("X : ",x," and Y : ",y);
+    const inner=(innerPassedValue)=>{
+        console.log("outerPassedValue : ",outerPassedValue," and innerPassedValue : ",innerPassedValue);
     }
     return inner;
 
