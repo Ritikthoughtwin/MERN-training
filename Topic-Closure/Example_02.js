@@ -6,10 +6,10 @@ function outer(){
     return inner;
 }
 
-const x=outer();
-const y=x();
+const outerReturnValue=outer();
+const innerReturnValue=outerReturnValue();
 
-console.log("value : ",y);
+console.log("value : ",innerReturnValue);
 
 
 /*......................................................................................................................................*/
@@ -22,7 +22,7 @@ const outer=()=>{
     return inner;
 }
 
-const x=outer();
-const y=x();
+outerReturnValue =outer();
+innerReturnValue =outerReturnValue();
 
-console.log("value : ",y);
+console.log("value : ",innerReturnValue);
