@@ -6,18 +6,18 @@ in the code. However, the variable's value will be undefined until it is assigne
 
 //variable hoisting with var
 
-console.log(x); // Output: undefined (due to hoisting)
-var x = 5;
-console.log(x); // Output: 5
+console.log(number); // Output: undefined (due to hoisting)
+var number= 5;
+console.log(number); // Output: 5
 
 /*........................................................................................................................*/
 
 //variable hoisting with let and const
 
-console.log(a);  //will not work
-let a=10;
+console.log(value);  //will not work
+let value=10;
 
 //and 
 
-console.log(a);//will not work
-const a=67;
+console.log(value);//will not work
+const value=67;
