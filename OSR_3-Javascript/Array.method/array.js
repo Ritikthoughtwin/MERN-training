@@ -63,7 +63,7 @@ console.log(isindex);
 // let p = a.includes(23);
 // // give the value is persent or not in boolen value
 
-///////////////////////////////////////////////////////reverse
+//reverse
 
 // a.reverse();
 // console.log(a);
