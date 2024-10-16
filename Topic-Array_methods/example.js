@@ -1,211 +1,375 @@
-// global array
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-/*.............................................................................................................................*/
+/*
+  Array :- 
+          An array in JavaScript is a data structure used to store 
+          multiple values in a single variable. It can hold various data 
+          types and allows for dynamic resizing. Elements are accessed by 
+          their index, starting from 0.
+          ex:- [1,2,3,"a","b",{ name : krishnakant ,age : 22}];
 
-let size = fruits.length; //it should print length of an array
-console.log(size);        //output : 4
-
-/*............................................................................................................*/
-
-
-let s=fruits.toString();     // it should convert array into string (a comma seperated string)
-console.log(s);               //output : Banana,Orange,Apple,Mango
-
-/*........................................................................................................*/
-
-
-let fruit = fruits.at(2);     // fruits.at() function shows the value stored in given index
-console.log(fruit);           // output : Apple
-
-/*.............................................................................................................*/
-
-
-let s2 = fruits.join(" * ");       /*  
-                                        .join ("*") array function returns the string 
-                                        with * by adding the * between all array elements
-                                   */
-console.log(s2);                 
-                                    // output : Banana*Orange*Apple*Mango
-
-/*..............................................................................................................*/
-
- /* 
-                                  // Here the pop() function removes the last element from array Actual array;
- fruits4.pop();                  
-                                  // And the it will return the removable value "mango" 
- 
- */                                       
-
-/*........................................................................................................*/
-
-/*                       // The push methods used to add elements in the end in array it makes changes in actual array
-fruits.push("Kiwi");      
-                         //And it will return the current length of an array  
+  Array Methods :- 
+                  Array methods are the build-in methods.
+                  They provide essential functionalities like adding, removing,
+                  and transforming elements, as well as searching, sorting and many more.
+                  
 */
-/*...........................................................................................................*/
 
-                          // The shift methods is used to remove value from front side and it also makes changes in actual array 
-fruits6.shift();      
-                          // and it returns the removed value
+// Global variables:-
 
-/*.................................................................................................*/
-                                      // The unshift methods is used to add value from front side of an array and it also makes changes in actual array 
-fruits7.unshift("Lemon");
-                                      //and it returns  the current length of an array after changes
-/*............................................................................................................*/
+let ArrayOfNumbers=[10,45,78,45,78,56,43,45,66,6,2,78,998]; 
+const ArrayOfSportsName = ["Cricket", "Volleyball", "Basketball", "Hockey"];
+const ArrayOfColorName=["red","yellow","green","brown","white","black","white"];
+const subArray = [[1,2],[3,4],[5,6]];
+let returnValue;
 
-const num_01 = [1,2,3,4,5,6,7,8,9,10];
-const num_01 = [11,12,13,14,15];
-                                                //concat method adds two or more array together
-                                                // does not effect the actual array
-                                                // it returns the new array
-const result = num_01.concat(num_02);
+// Some array methods are :-
+
+/*.............................................................................................................................................*/
+
+// Array.length 
+// The length property returns the length of an array
 
 
-
-/*..........................................................................................................................*/
-
+console.log("Sports names : ", ArrayOfSportsName.length);   // using .length method
 
 
-fruits.copyWithin(2, 0); // it makes changes in actual array 
-                         // The copyWithin() method copies array elements to another position in an array.
-                         //The copyWithin() method overwrites the existing values
+/*......................................................................................................................................................*/
 
-/*...............................................................................................................*/
+// toString() method
+// return a new string
+// The JavaScript method toString() converts an array to a string of (comma separated) array values.
+// does not effect the actual array
 
-const myArr = [[1,2],[3,4],[5,6]];     // Create a new array with the sub-array elements concatenated
-const newArr = myArr.flat();
-console.log(newArr);
+ let StringOfNumArray= ArrayOfNumbers.toString(); // using toString methods which returns a new string of comma seperated vales of given array
+ console.log("string :",StringOfNumArray);
+ console.log("Type : ",typeof(StringOfNumArray));
 
-/*..................................................................................................................*/
-
-
-console.log(fruits.splice(2, 0, "Lemon", "Kiwi"));   //The splice() method adds and/or removes array elements
-
-                                                     //The splice() method overwrites the original array
-
-/*.................................................................................................................*/
-
-
-const slice = fruits.slice(1, 3);   //      arr.slice(begin, end);
-                                    //     The slice() method returns selected elements in an array, as a new array
-console.log(slice);                 //      The slice() method does not change the original array
+ /*..................................................................................................................................................................................................*/
+   
+ //   Array at()
+ //   ES2022 intoduced the array method at()
+ //   The at() method returns an element from an array according to given index.
+  
+ let Element= ArrayOfSportsName.at(3);  //  using at() method
+ console.log("Sport name : ",Element);
 
 
-/*...................................................................................................................*/
+ /*..........................................................................................................................................................................................................................*/
 
-const batsman = ["virat", "rohit", "hardik", "virat"];                                 // Finds the first index of "Apple":
-let batsman_index = fruits.indexOf("virat");                             //The indexOf() method returns the first index of a specified value.
-                                         
-/*.....................................................................................................................*/
+  // Array join() method
+  // The join() method joins all array elements into a string
+  // return a new string
+  // Does not effect in actual array
+ 
+      let colorString=ArrayOfColorName.join();
+      console.log("color :",colorString);
 
+       colorString=ArrayOfColorName.join("=");
+      console.log("color :",colorString);
 
-const bowler = ["Bumrah", "shami", "siraj", "shami"];  //  Find the last index of "Apple":
-                                                         // The lastIndexOf() method returns the last index of a specified value
-let bowler_index = fruits12.lastIndexOf("shami") 
-
-
-/*......................................................................................................................................*/
-
-
-                                       //The includes() method returns true if an array contains a specified value
-fruits.includes("Mango");                // is true 
-
-
-/*..............................................................................................................................*/
-
-
-const numbers = [4, 9, 16, 25, 29];
-let first = numbers.find(myFunction);                  //  The find() method returns the value of the first element that passes a test
-                                                       //   The find() method executes a function for each array element
-function myFunction(value, index, array) {             //    The find() method returns undefined if no elements are found
-  return value > 18;                                    //    The find() method does not change the original arra
-}
-
-// with arrow function
-
-let second =numbers.find((value, index, array)=>{             
-  return value > 18;                                    
-}}
-
-
-/*...................................................................................................................*/
-
-
-fruits.sort();                      // The sort() method sorts the elements of an array
-                                    // The sort() method sorts the elements as strings in alphabetical and ascending order
-                                     // The sort() method overwrites the original array
-
-// with numbers 
-
-   const n = [40, 100, 1, 5, 25, 10];
-   n.sort(function(a, b){return a - b});   //for ascending order
-
-
-   n.sort(function(a, b){return b - a});     //for descending order
-
-
-/*......................................................................................................................*/
-
-
-                            // The reverse() method reverses the order of the elements in an array
-fruits.reverse();           //  The reverse() method overwrites the original array
+       colorString=ArrayOfColorName.join("++");
+      console.log("color :",colorString);
 
 
 
-
-/*........................................................................................................................*/
-
+/*....................................................................................................................................................................................*/
 
 
-const values = [78, 56, 9, 1, 25];                   // The forEach() method calls a function for each element in an array
-let txt = "";                                        
-                                                      // it does not change the actual array
-values.forEach((value, index, array)=> {
-  txt += value + "<br>";
-});
+  //  Array pop() method
+  //  Make changes in actual array
+  //  The pop() method removes the last element from an array
+  //  The pop() method returns the value that was "popped out"
+ 
+  returnValue=ArrayOfColorName.pop(); // it removes the last element from ArrayOfColorName array
+  let emptyArray=[];
+  console.log("return value : ",returnValue)
+  returnValue=emptyArray.pop();
+  console.log("return value : ",returnValue)
 
 
 
+  /*................................................................................................................................................................................................................*/
 
-/*..................................................................................................................................*/
+  //  Array push() method.
+  //  The push() method adds a new element to an array at the end.
+  //  Make changes in actual array.
+  //  The push() method returns the updated array length.
+   
+   console.log("Actual array before push() operation: ",ArrayOfNumbers)
+   returnValue=ArrayOfNumbers.push(788);
+   console.log("Actual array after push() operation: ",ArrayOfNumbers)
+   console.log("return value : ",returnValue);
 
 
-                                                       // map() creates a new array from calling a function for every array element
-const result = values.map((value, index, array)=> {    // map() does not change the original array
-  return value * 2;
-});
+
+/*.........................................................................................................................................................................................................*/
+
+
+//    Array shift() method.
+//    The shift() method removes the first array element and "shifts" all other elements to a lower index.
+//    The shift() method returns the value that was "shifted out".
+//    Makes changes in array.
    
 
-
-/*.............................................................................................................................*/
-
-
-const filtered_array= numbers.filter((value, index, array)=>{    //The filter() method creates a new array filled with elements that pass a test provided by a function.
-      return value > 18;
-} );
+    
+    console.log("Actual array before shift() operation: ",ArrayOfNumbers)
+    returnValue=ArrayOfNumbers.shift();
+    console.log("Actual array after shift() operation: ",ArrayOfNumbers)
+    console.log("return value : ",returnValue);
 
 
+ /*..................................................................................................................................................................................................................*/
+ 
+ 
+  //     Array unshift() method
+  //     The unshift() method adds a new element to an array at the beginning.
+  //     The unshift() method returns the updated array length
+
+  console.log("Actual array before unshift() operation: ",ArrayOfNumbers)
+  returnValue=ArrayOfNumbers.unshift(555);
+  console.log("Actual array after unshift() operation: ",ArrayOfNumbers)
+  console.log("return value : ",returnValue);
+ 
+  
+/*......................................................................................................................................................................................................*/
+
+
+  //    Array concat() method
+  //    The concat() method creates a new array by merging existing arrays:
+  //    The concat() method does not change the existing arrays. It always returns a new array.
+  //    The concat() method can take any number of array arguments
+
+  returnValue=ArrayOfColorName.concat(ArrayOfNumbers,ArrayOfSportsName);
+  console.log("return array : ",returnValue);
+
+
+  /*.....................................................................................................................................................................................................................................*/
+   
+  //   copyWithin() method.
+  //   The copyWithin() method copies array elements to another position in an array.
+  //   The copyWithin() method overwrites the existing values.
+  //   The copyWithin() method does not change the length of the array.
+
+  console.log("Actual array before copyWithin() operation: ",ArrayOfNumbers)
+  returnValue=ArrayOfNumbers.copyWithin(2,0,5);
+  console.log("Actual array after copyWithin() operation: ",ArrayOfNumbers)
+  console.log("return value : ",returnValue);
+
+
+  /*........................................................................................................................................................................................................................................*/
+
+  //      Array flat() method 
+  //      ES2019 Introduced the Array flat() method.
+  //      The flat() method creates a new array with sub-array elements 
+
+
+  returnValue=subArray.flat();
+  console.log(returnValue)
+
+
+  /*............................................................................................................................................................................................................................................*/
+    
+  // ES2019 added the Array flatMap() method to JavaScript
+  // The flatMap() method first maps all elements of an array and then creates a new array by flattening the array.
+     
+  
+   
+     returnValue=subArray.flatMap((value)=>{
+        return [value[0]+1,value[1]+2];
+     });
+
+     console.log(returnValue);
+
+
+ /*....................................................................................................................................................................................................................................................*/
+ 
+ //   Array splice() method.
+ //   The splice() method adds new items to an array.
+ //   The splice() method effect the actual array.
+ //   And its returns the array of deleted elements.
+      
+    console.log("Actual array before splice() operation: ",ArrayOfNumbers)
+    returnValue=ArrayOfNumbers.splice(2,5,"one","two","three","four","five");
+    console.log("Actual array after splice() operation: ",ArrayOfNumbers)
+    console.log("retrun value : ",returnValue);
+
+
+ /*.........................................................................................................................................................................................................................................................*/
+ 
+ //  Array slice() method
+ //  The slice() method slices out a piece of an array 
+ //  The slice() method returns new array.
+ //  It does not change in actual array.
+
+     returnValue=ArrayOfNumbers.slice(2,8);
+     console.log("return value :",returnValue);
 
 
 
-/*................................................................................................................................*/
+ /*.........................................................................................................................................................................................................................................................*/
+
+ //  Array indexOf() method
+ //  The indexOf() method searches an index for an element value and returns its position.
+ //  It returns the  first index where it finds the element and other index where the same data is present is not comes in use.
+ //  Array.indexOf() returns -1 if the item is not found.  
+   returnValue=ArrayOfColorName.indexOf("white");
+   console.log("return value :",returnValue);
 
 
 
-let sum = numbers.reduce((total, value, index, array)=> {   // The reduce() method executes a reducer function for array element
-  return total + value;                                     // The reduce() method returns a single value: the function's accumulated result.
-});                                                         // The reduce() method does not change the original array.
+/*.........................................................................................................................................................................................................................................................*/
+
+//   Array includes() methods
+//   ECMAScript 2016 introduced Array.includes() to arrays. 
+//   This allows us to check if an element is present in an array or not.
+//   Returns boolean values
+
+     returnValue=ArrayOfColorName.includes("red");
+     console.log("return value :",returnValue);
+
+
+/*.........................................................................................................................................................................................................................................................*/
+
+//   Array find() method
+//   The find() method returns the value of the first array element that passes a test function.
+  
+returnValue=ArrayOfNumbers.find((value)=>{
+    return value>70000;
+})
+
+console.log("return value :",returnValue);
+
+
+/*.........................................................................................................................................................................................................................................................*/
+  
+// Array sort() method.
+// The JavaScript sort() method arranges array elements alphabetically by default, treating them as strings.  
+// For numerical sorting, a custom function is needed.
+
+console.log("Actual array before sort() operation: ",ArrayOfSportsName);
+returnValue=ArrayOfSportsName.sort();
+console.log("Actual array after sort() operation: ",ArrayOfSportsName);
+console.log("return value :",returnValue);
+
+// for numerical array we have to create a custom function
+
+let numArray=[34,67,23,12,89,56,45];
+
+numArray.sort((a,b)=>{                      // for ascending order
+    return a-b;
+})
+console.log("Ascending",numArray);
+
+numArray.sort((a,b)=>{                      // for descending order
+    return b-a;
+})
+console.log("Descending",numArray)
+
+
+
+/*.........................................................................................................................................................................................................................................................*/
+//  Array reverse() method
+//  The reverse() method reverses the elements in an array
+//  Effect the actual array
+
+numArray.reverse()
+console.log(numArray);
+
+
+/*.........................................................................................................................................................................................................................................................*/
+
+//  forEach method
+/* 
+ The forEach() method in javascript is an array method that allows you to execute 
+ a provided function once for each array elements.
+*/ 
+// no return value
+// does not effect the actual array
+
+ArrayOfSportsName.forEach((value,index,array)=>{
+console.log(value);
+})
+
+
+let sum =0;
+numArray.forEach((value)=>{
+    return 
+})
+
+
+/*.............................................................................................................................................................................................................................................................*/
+//  Array map() method
+//  The map() method creates a new array by performing a function on each array element.
+//  The map() method does not change the original array.
+
+returnValue=ArrayOfSportsName.map((value)=>{
+    return value+"@";
+})
+
+console.log("return array : ",returnValue);
+
+
+returnValue=ArrayOfColorName.map((value)=>{
+    return value+"*$%^&*";
+})
+
+console.log("return array : ",returnValue);
+
+
+
+/*.................................................................................................................................................................................................................................................................*/
+
+// Array filter() method
+// The filter() method creates a new array with array elements that pass a test.
+//  The filter() method does not change the original array.
+const numbersArray = [45, 4, 9, 16, 25];
+const over18 = numbersArray.filter((value)=>{
+    return value > 18;
+  });
+  console.log("over18 : ",over18);
+
+
+
+/*.................................................................................................................................................................................................................................................................*/
+
+
+//    Array reduce() method
+//    The reduce() method runs a function on each array element to reduce it to a single value.
+//    The reduce() method works from left-to-right in the array.
+//    The reduce() method does not reduce the original array.
+
+
+
+let sumValue = numbersArray.reduce((total, value, index, array)=> {
+    return total + value;
+  });
+  console.log("sum : ",sumValue);
+
+  // The reduce() method can accept an initial value
+    
+ 
+sumValue = numbersArray.reduce((total, value)=> {
+    return total + value;
+  }, 100);
+
+  console.log("sum : ",sumValue);
+
+
+  /*...................................................................................................................................................................................................................................................................*/
+  
+
+  //  Array every() method
+  //  The every() method checks if all array values pass a test.
+  // returns false or true
+ 
+let allOver18 = numbersArray.every((value)=> {
+    return value > 18;
+  } );
+  console.log(allOver18)
 
 
 
 
 
-
-/*.....................................................................................................................*/
-
-
-let new_array=Array.from("ABCDEFG");     // Create an array from a given value
-
+ 
 
 
