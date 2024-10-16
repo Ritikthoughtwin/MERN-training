@@ -38,7 +38,7 @@ processNumbers(displayNumber);
 
 /.............................................................................................../
 
-function performAsyncOperationWithArrow(callback) {
+const performAsyncOperationWithArrow=(callback)=> {
     console.log("Performing operation...");
 
     setTimeout(() => {
