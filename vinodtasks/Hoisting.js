@@ -1,58 +1,73 @@
-// only the declaration are hoisted not the initialization
-// a=5
-//  x=a
-// var x
-// console.log(x)
-
-// output=5 show the
-
-// a=5
-// x=a
-// let x
-// console.log(x)
-// let variable m run time error show
-
-// a=5
-// x=a
-// const x
-// console.log(x)
-// const variable m starting the syntax error show
-
-console.log(a);
-var a = 20;
-// undefined
-console.log(a);
-// output 20
-//  call the function before  its declaration
-fun(10, 20);
-
-function fun(val1, val2) {
-  console.log(val1 + val2);
-}
-// output 30
-// hoisting first of memery allocate
-
-// console.log(mylet)
-// let mylet=10
-// ReferenceError: Cannot access 'mylet' before initialization
 
 // Hoisting is a JavaScript mechanism where variables and function
 // declarations are moved to the top of their scope before code execution.
+// Arrow Function Expression with let and const (Not Hoisted)
 
-// function getName(a,b){
-//     return a+b
-// }
+addition(10, 20);   //  call the function before  its declaration
 
-// let result =getName(5,2)
-// console.log(result)
+function  addition (val1, val2) {
+  console.log(val1 + val2);
+}
 
-// Hoisting is  javascript default behavior of moving all
-// declaration  to the top of the code
+//  console.log(mylet)
+//   let mylet=10  // ReferenceError: Cannot access 'mylet' before initialization
 
-var a = 10;
 
-var fn = function () {
-  console.log(a);
-  var a = 20;
-};
-console.log(fn());
+// // Function Expression with let and const (Not Hoisted)
+ 
+// expressFun(); // eferenceError: Cannot access expressFun before initialization
+
+// let expressFun = function () {
+//     console.log("");
+// };
+
+
+console.log(checkanswer);
+var checkanswer = 20;
+// undefined // declarations are moved to the top of their scope before code execution.
+console.log(checkanswer);
+// output 20
+// hoisting first of memery allocate
+
+// only the declaration are hoisted not the initialization
+// example 1 var variable
+showanswer=5
+ console=showanswer
+var console
+console.log(console)
+
+// output=5 show the
+
+
+// example 2 let variable
+
+numberlets=5
+storelets=numberlets
+let storelets
+console.log(storelets)
+
+// example 3 const variable
+// numberconst=5
+//  storeconst=number
+// const storeconst
+// console.log(storeconst) // error show Missing initializer in const declaration
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,106 +2,90 @@
 // This technique allows a function to call another function
 // A callback function can run after another function has finished
 
-// let myDisplayer=(some) =>{
+//normal function
+function sayhii() {
+  console.log("hii");
+}
 
-//    console.log(some)
-//   }
+function sayhello() {
+  console.log("hello");
+}
 
-//   function myFirst() {
-//     myDisplayer("Hello");
-//   }
+sayhii();
+sayhello();
 
-//   function mySecond() {
-//     myDisplayer("Goodbye");
-//   }
-//   myFirst()
-//   mySecond()
+// callback = a function that is passed as on arguments to another function
+callback(callbackothers);
+function callback(callBack) {
+  console.log("hii");
+  callBack();
+}
+function callbackothers() {
+  console.log("hello");
+}
 
-// Tea process
+//callback problem many time debit no control the code
 
-// function putPanInGas(){
-//     console.log("pan placed in gas")
-// }
-// function addwater(){
-//     console.log("add water in tea")
-// }
-// function addtealeaves(){
-//     console.log("tea leaves added")
-// }
-// function addsuger(){
-//     console.log("add suger in tea")
-// }
-// function addginger(){
-//     console.log("add ginger in tea")
-// }
-// function pureit(){
-//     console.log("pureit tea is ready")
-// }
+function buyNow() {
+  transcation();
+  transcation();
+}
 
-// console.time("tea")
-// putPanInGas()
-// addsuger()
-// addginger()
-// pureit()
-// console.timeLog("tea")
+function transcation() {
+  console.log("amount 10k debit");
+}
+buyNow(transcation());
 
-// all function independent
-// no flow control and no error handling
+function call() {
+  console.log("call");
+   return function data() {
+     console.log('-')
 
-// call back
+   }
+}
 
-// function putPanInGas(){
-//     console.log("pan placed in gas")
-// }
-// function addwater(callback){
-//     console.log("add water in tea")
-//     setTimeout(function(){
-//         console.log("water boils")
-//         callback()
+call()()
 
-//     },3000)
-// }
-// function addtealeaves(){
-//     console.log("tea leaves added")
+// call the function
 
-// }
-// function addsuger(){
-//     console.log("add suger in tea")
-//     addginger()
-// }
-// function addginger(){
-//     console.log("add ginger in tea")
-//     setTimeout(function(){
-//         pourit()
+ function hightOrder(callback){
+    callback(5);
+ }
 
-//     },1000)
-// }
-// function pourit(){
-//     console.log("pourit tea is ready")
-// }
+ function callBack(value){
+    console.log(" value : ",value);
+ }
 
-// putPanInGas()
-// addwater(addsuger)
+ hightOrder(callBack);
 
-// function fun (callback){
-//     console.log("hii")
+//create new individual function objects at every re-render of the component
 
-// }
-// function fun1(){
-//     console.log("helo")
-// }
-// fun1(fun())
+const calculate = (a,b,opration)=>{
+   return opration(a,b)
 
-// callback problem many time debit no control the code
+}
 
-// function buynow(){
-//     transcation()
-//     transcation()
+//method 1
 
-// }
+const addition=calculate(3,4 ,(num1,num2)=>{
+   return num1+num2
+})
+console.log(addition)
 
-// function transcation(){
-//     console.log("amount 10k debit")
+//method 2
 
-// }
-// buynow(transcation())
+const subtract=(a,b)=>a-b
+const result=calculate(3,3,subtract)
+console.log(result)
+
+//delay in execution
+
+function fristName(name) {
+  console.log("my name is", name);
+}
+function lastName(last) {
+  console.log("last name", last);
+}
+
+fristName("vinod");
+setTimeout(() => lastName("rajput"), 1000);

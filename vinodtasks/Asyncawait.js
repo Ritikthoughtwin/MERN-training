@@ -1,22 +1,22 @@
-//"async and await make promises easier to write"
+//async and await make promises easier to write
 //async makes a function return a Promise
 //await makes a function wait for a Promise
 
-// async function getName() {
-//   return new Promise((resolve, rejects) => {
-//     setTimeout(() => {
-//       resolve(455);
-//     });
-//   }, 3500);
-// }
+async function getName() {
+  return new Promise((resolve, rejects) => {
+    setTimeout(() => {
+      resolve(455);
+    });
+  }, 3500);
+}
 
-// console.time("process");
-// console.log("print");
-// let data = getName();
-// console.log(data);
-// console.log("function");
-// console.log("await");
-// console.timeLog("process");
+console.time("process");
+console.log("print");
+let data = getName();
+console.log(data);
+console.log("function");
+console.log("await");
+console.timeLog("process");
 
 // output
 //print
@@ -27,26 +27,26 @@
 
 
 
-// async function getName() {
-//     return new Promise((resolve, rejects) => {
-//       setTimeout(() => {
-//         resolve(455);
-//       });
-//     }, 3500);
-//   }
+async function getName() {
+    return new Promise((resolve, rejects) => {
+      setTimeout(() => {
+        resolve(455);
+      });
+    }, 3500);
+  }
   
-// async function main(){
-//     console.time("process");
-//   console.log("print");
-//   let data = await getName();
-//   console.log(data);
-//   console.log("function");
-//   console.log("await");
-//   console.timeLog("process");
+async function main(){
+    console.time("process");
+  console.log("print");
+  let data = await getName();
+  console.log(data);
+  console.log("function");
+  console.log("await");
+  console.timeLog("process");
 
-//   }
+  }
 
-//   main()
+  main()
   
   
 //output
@@ -63,18 +63,18 @@
 //rejects means promises has not settled successfully
 
 
-// async function getName (){
-//   let data = await fetch('https://jsonplaceholder.typicode.com/todos/4')
-//  let result= await data.json()
-//     return  result
+async function getName (){
+  let data = await fetch('https://jsonplaceholder.typicode.com/todos/4')
+ let result= await data.json()
+    return  result
     
-// }
+}
 
-//  async function main(){
-//    let data= await getName()
-//    console.log(data)
-// }  
-// main()
+ async function main(){
+   let data= await getName()
+   console.log(data)
+}  
+main()
 
 
 
