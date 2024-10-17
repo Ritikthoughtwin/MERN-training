@@ -20,6 +20,7 @@ let arrPeople = [
   { name: 'Ravneet', age: 71, number: 2172362323, email: 'Rasv@gmail.com' },
   { name: 'suitya', age: 93, number: 1232362323, email: 'su@gmail.com' },
   { name: 'Nitya', age: 30, number: 8922362323, email: 'nitya@gmail.com' },
+  { name: 'a', age: 0, number: 8922362323, email: 'a.com' },
 ];
 
 let newarray = [];
@@ -134,9 +135,29 @@ let newarray = [];
 // }
 // console.log(test());
 
-// let newdata = arrPeople.reduce((acc, cur) => {
-//   if (acc[cur.age]) {
-//     console.log(acc);
+const obj = {
+  name: 'abc',
+};
+
+// obj['age'] = 25;
+
+console.log(obj['name']);
+
+// acc
+
+let newdata = arrPeople.reduce((acc, cur) => {
+  if (acc[cur.age]) {
+    acc[cur.age] = ++acc[cur.age];
+  } else {
+    acc[cur.age] = 1;
+  }
+  // console.log('acc', cur);
+  return acc;
+}, {});
+console.log(newdata);
+
+// let arr = [1, 5, 4, 23, 42, 4];
+// let k = arr.reduce((acc, cur) => {
+//   if (cur > acc) {
 //   }
-// }, {});
-// console.log(newdata);
+// }, 0);
