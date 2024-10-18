@@ -2,16 +2,16 @@
 
 // creation of callback & example
 
-// function examIsDone() {
-//   setTimeout(() => {
-//     console.log('exam result is out');
-//   }, 5000);
-// }
-// function examIsGoingon(callbackOfexamDone) {
-//   console.log('exam is running');
-//   callbackOfexamDone();
-// }
-// examIsGoingon(examIsDone);
+function examIsDone() {
+  setTimeout(() => {
+    console.log('exam result is out');
+  }, 5000);
+}
+function examIsGoingon(callbackOfexamDone) {
+  console.log('exam is running');
+  callbackOfexamDone();
+}
+examIsGoingon(examIsDone);
 
 // callback passed in another function and return inside it is callback
 // callback function is introdused in 2015 for async Programing

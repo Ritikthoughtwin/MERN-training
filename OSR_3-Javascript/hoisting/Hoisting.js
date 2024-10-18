@@ -1,40 +1,40 @@
 ///////////////////////////////HOISTING
 // The Hoisting work before code run the memory
 
-// a = 20;
-// console.log(a);
-// var a;
+num = 20;
+console.log(num);
+var num;
 // the hositing is that where javascript instilaizatoin go on top by dafault
 
 //////////////////////////////////////////////////////////////////////Error
 
-// num = 'aditya';
-// console.log(num);
-// let num;
+strName = 'aditya';
+console.log(strName);
+let strName;
 //  let const is not work with hostingh bcause they are work on block of code
 // let and const is Es6 concept which work on local scope thats why it not work on hostiing
 
 //////////////////////////////////function hosting
 
-// App();
-// function App() {
-//   console.log('Aditya');
-// }
+checkHoisting();
+function checkHoisting() {
+  console.log('Aditya');
+}
 
 // function is declared after the calling
 
 //////////////////////////////////////////////////////////////////////Error
-// fun();
-// var fun = () => {
-//   console.log('track');
-// };
+arrowHosting();
+var arrowHosting = () => {
+  console.log('track');
+};
 //////////////////////////////////////arrow funactin is not work with hositing
 // all the variable can store as undefind and the function and  before instilization code
 
-function fun() {
-  console.log('aditya ', a);
+function taskHosting() {
+  console.log('aditya ', numfirst);
 }
-console.log('qweldyhiuqwuidhe qwjeshqw ', a);
+console.log('we will get error', a);
 
-fun();
-var a = 10;
+taskHosting();
+var numfirst = 10;

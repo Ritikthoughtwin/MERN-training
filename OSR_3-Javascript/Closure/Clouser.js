@@ -24,5 +24,3 @@ function firstFunction() {
 // it also work in arrow function
 //clouser work on lexical scope ==>are scope which is used neested function
 // global executive context every function has it exscitive contxt
-
-// //////////////////////////////////
