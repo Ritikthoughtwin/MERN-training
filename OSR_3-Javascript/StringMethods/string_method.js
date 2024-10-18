@@ -116,5 +116,8 @@ let num = '5';
 //     groups: undefined
 //   ]
 
-emptystring = theStort.matchAll('dog');
-console.log(Array.from(emptystring));
+// emptystring = theStort.matchAll('dog');
+// console.log(Array.from(emptystring));
+
+emptystring = nameFirst.split('');
+console.log(emptystring);

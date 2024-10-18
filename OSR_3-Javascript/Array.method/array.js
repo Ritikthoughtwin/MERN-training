@@ -108,12 +108,12 @@ let newarray = [];
 // delete arrName[0];
 // console.log(arrName[0]);
 
-//CopyWithin()
+// CopyWithin()
 //Copy the element of the array
 //It will change Orignal array
 
-//arrName.copyWithin(2,0);
-//console.log(arrName);
+// arrName.copyWithin(2,0);
+// console.log(arrName);
 
 // let singlenum = arrnum.reduce((max, cur) => {
 //   if (cur > max) {
@@ -135,29 +135,59 @@ let newarray = [];
 // }
 // console.log(test());
 
-const obj = {
-  name: 'abc',
-};
-
-// obj['age'] = 25;
-
-console.log(obj['name']);
-
 // acc
 
-let newdata = arrPeople.reduce((acc, cur) => {
-  if (acc[cur.age]) {
-    acc[cur.age] = ++acc[cur.age];
-  } else {
-    acc[cur.age] = 1;
-  }
-  // console.log('acc', cur);
-  return acc;
-}, {});
-console.log(newdata);
-
-// let arr = [1, 5, 4, 23, 42, 4];
-// let k = arr.reduce((acc, cur) => {
-//   if (cur > acc) {
+// let newdata = arrPeople.reduce((acc, cur) => {
+//   if (acc[cur.age]) {
+//     acc[cur.age] = ++acc[cur.age];
+//   } else {
+//     acc[cur.age] = 1;
 //   }
-// }, 0);
+//   // console.log('acc', cur);
+//   return acc;
+// }, {});
+// console.log(newdata);
+
+// let obj = {
+//   name: 'aditya',
+//   age: 23,
+//   email: 'Adi@gma9ilc.com',
+// };
+
+// let obj1 = { ...obj, age: 54 };
+// console.log(obj);
+// console.log(obj1);
+
+let k = 'my,name,is,abc';
+let b = 'my,name,is,abc';
+// let m = k.split('2');
+// let m = k.copyWithin(1, 3);
+// console.log(m);
+
+// let nw = Array.from(k);
+// let nb = b.split(',');
+
+// console.log(nw);
+// console.log(nb);
+
+let a = ['aab', 'abbbbc', 'bba', 'ccu', 'ab'];
+let newarr = [];
+for (let m = 0; m < a.length; m++) {
+  var ho = a[m].split('');
+
+  for (let i = 0; i < ho.length; i++) {
+    for (let j = i + 1; j < ho.length; j++) {
+      if (ho[i] == ho[j]) {
+        // console.log(ho[i]);
+        let k = ho;
+        let ro = k.reduce((acc, val) => acc + val, '');
+        let index = a.indexOf(ro);
+        newarr.push(index);
+      }
+    }
+  }
+}
+console.log(newarr);
+
+let newval = newarr.filter((item, index) => newarr.indexOf(item) === index);
+console.log(newval);
